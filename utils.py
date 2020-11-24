@@ -4,5 +4,7 @@ def start_ngrok():
     # view the ngrok public url from the flask development server
     from pyngrok import ngrok
 
-    url = ngrok.connect(500)
-    print('* Tunnel URL:', url)
+    public_url = ngrok.connect(5000)  # .connect returns public url assigned to localhost
+    print('* Tunnel URL:', public_url)
+
+
